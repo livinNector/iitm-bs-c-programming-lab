@@ -71,7 +71,7 @@ Try the following:
 ```bash
 cd path/to/the/source/file
 ```
-- Compile the Code. If you
+- Compile the Code.
 ```bash
 gcc source_file.c -o source_file
 ```
