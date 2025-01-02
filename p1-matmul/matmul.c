@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <time.h>
 
-#define M 3
+// while compiling use -D DIM=5 to change the dimensions to 5
+#ifndef DIM
+#define DIM 3
+#endif
 
 double gettime() {
         struct timespec t;
@@ -11,11 +14,11 @@ double gettime() {
         return tvsec + 1e-9 * tvnsec;
 }
 
-void read_mat(char* filename, float A[M][M]) {
+void read_mat(char* filename, float A[DIM][DIM]) {
 
 }
 
-void matmul(float A[M][M], float B[M][M], float C[M][M]) {
+void matmul(float A[DIM][DIM], float B[DIM][DIM], float C[DIM][DIM]) {
 
 }
 
@@ -28,15 +31,20 @@ void matmul(float A[M][M], float B[M][M], float C[M][M]) {
  * A[0][0] A[0][1] A[0][2]
  * A[1][0] A[1][1] ... etc.
  */
-void print_mat(float A[M][M]) {
+void print_mat(float A[DIM][DIM]) {
 
 }
 
 int main() {
-    float A[M][M];
-    float B[M][M];
-    float C[M][M];
+    float A[DIM][DIM];
+    float B[DIM][DIM];
+    float C[DIM][DIM];
+    
+    // Task 1: Read Matrix A and B and print them
+    printf("Dimension of the matrices: %d\n", DIM);
 
+    read_mat("a.txt", A);
+    read_mat("b.txt", B);
 
     printf("Matrix A: \n");
     print_mat(A);
@@ -44,12 +52,15 @@ int main() {
     printf("Matrix B: \n");
     print_mat(B);
 
-    double t1 = gettime();
-    // Declare a matrix C and use it for multiplication
-    matmul(A, B, C);
-    double t2 = gettime();
-    printf("Matrix C: \n");
-    print_mat(C);
+    // Task 2: Perform Matrix multiplication
+    // Uncomment the below part after doing task 1.
 
-    printf("Time taken: %8.4g milliseconds\n", (t2-t1)*1000);
+    // double t1 = gettime();
+    // // Declare a matrix C and use it for multiplication
+    // matmul(A, B, C);
+    // double t2 = gettime();
+    // printf("Matrix C: \n");
+    // print_mat(C);
+
+    // printf("Time taken: %8.4g milliseconds\n", (t2-t1)*1000);
 }

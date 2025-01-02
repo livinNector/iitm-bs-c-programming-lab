@@ -1,8 +1,10 @@
 import numpy as np
 from numpy import random
 import sys
+if len(sys.argv)<2:
+    raise ValueError("Matrix dimension not passed.\nUsage: python genmat.py DIM\n    DIM - dimension of the square matrix.")
 
-M = 10
+M = int(sys.argv[1])
 
 
 A = random.random((M, M))
