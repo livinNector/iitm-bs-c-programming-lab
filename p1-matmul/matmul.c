@@ -6,40 +6,49 @@
 #define DIM 3
 #endif
 
-double gettime() {
-        struct timespec t;
-        timespec_get(&t, TIME_UTC);
-        unsigned long tvsec = t.tv_sec;
-        unsigned long tvnsec = t.tv_nsec;
-        return tvsec + 1e-9 * tvnsec;
-}
-
-void read_mat(char* filename, float A[DIM][DIM]) {
-
-}
-
-void matmul(float A[DIM][DIM], float B[DIM][DIM], float C[DIM][DIM]) {
-
+/// @brief Reads the matrix from a space separated text file.
+/// @param filename Path to the file
+/// @param A 2D array of dimension DIMxDIM defined by the DIM macro.
+void read_mat(char *filename, float A[DIM][DIM])
+{
 }
 
 /**
  * @brief print a Matrix in rows and columns
- * 
+ *
  * @param A: 2-D matrix
- * 
+ *
  * Print the matrix out so that each row is on one line.  Example:
  * A[0][0] A[0][1] A[0][2]
  * A[1][0] A[1][1] ... etc.
  */
-void print_mat(float A[DIM][DIM]) {
-
+void print_mat(float A[DIM][DIM])
+{
 }
 
-int main() {
+/// @brief Performs the matrix multiplication on Matrix A and B and saves the results to Matrix C
+/// @param A Input Matrix A
+/// @param B Input Matrix B
+/// @param C Output Matrix C
+void matmul(float A[DIM][DIM], float B[DIM][DIM], float C[DIM][DIM])
+{
+}
+
+double gettime()
+{
+    struct timespec t;
+    timespec_get(&t, TIME_UTC);
+    unsigned long tvsec = t.tv_sec;
+    unsigned long tvnsec = t.tv_nsec;
+    return tvsec + 1e-9 * tvnsec;
+}
+
+int main()
+{
     float A[DIM][DIM];
     float B[DIM][DIM];
     float C[DIM][DIM];
-    
+
     // Task 1: Read Matrix A and B and print them
     printf("Dimension of the matrices: %d\n", DIM);
 
