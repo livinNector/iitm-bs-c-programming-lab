@@ -26,7 +26,8 @@ void print_student(student_t *s)
     printf("");
 }
 
-// Task 3: Implement the compute_grade_function
+
+char grades[] = "UEDCBAS";
 
 /**
  * @brief Computes the grade based on the student marks and assigns to the grade attribute.
@@ -43,10 +44,19 @@ void print_student(student_t *s)
  */
 void compute_grade(student_t *s)
 {
-    
+    int grade_idx = s->marks / 10 - 3;
+    if (grade_idx > 6)
+    {
+        grade_idx = 6;
+    }
+    if (grade_idx < 0)
+    {
+        grade_idx = 0;
+    }
+    s->grade = grades[grade_idx];
 }
 
-// Task 4: Fill the ... parts in the get_student_data_from_csv function
+// Task 3: Fill the ... parts in the get_student_data_from_csv function
 
 /// @brief Get the student data as a dynamic array from a csv file.
 /// @param filename The csv file
