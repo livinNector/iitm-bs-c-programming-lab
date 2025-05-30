@@ -37,8 +37,9 @@ The input to this program will be a csv file:
     Run `make test_student_struct` to test this function.
     Run `make test_compute_grade` to test compute_grades function.
 3. Completing the `get_student_data_from_csv` function in `student.c`.  
-   Run `make test_read_csv` to test this this function.
+   Run `make test_read_csv` to test this function.
 4. Update `template.txt` file to a c-style format string.
+   Run `make test_template` to test this. This will create a file called `template_output.txt` which should have a sample formatted text.
 5. Using the `file_printf` macro (defined in `utils.h`) in `main.c` to print each template to the required files.
 
 
