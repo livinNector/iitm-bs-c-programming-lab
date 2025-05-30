@@ -15,7 +15,7 @@ char *file_get_content(char *filename);
  */
 #define file_printf(filename, format, ...) \
     FILE *f = fopen(filename, "w");                  \
-    fprintf(f, template, __VA_ARGS__);               \
+    fprintf(f, format, __VA_ARGS__);               \
     fclose(f);
 
 #endif
