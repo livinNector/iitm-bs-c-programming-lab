@@ -35,12 +35,11 @@ The input to this program will be a csv file:
 1. Defining `student_t` type in `student.h`
 2. Implementing the `print_student` function in `student.c`.  
     Run `make test_student_struct` to test this function.
-3. Implementing the `compute_grade` function in `student.c`.   
-   Run `make test_compute_grade` to test this function.
-4. Completing the `get_student_data_from_csv` function in `student.c`.  
+    Run `make test_compute_grade` to test compute_grades function.
+3. Completing the `get_student_data_from_csv` function in `student.c`.  
    Run `make test_read_csv` to test this this function.
-5. Creating a c-style format string in `main.c` similar to the example in `template.txt` file.
-6. Using the `file_printf` macro (defined in `utils.h`) in `main.c` to print each template to the required files.
+4. Update `template.txt` file to a c-style format string.
+5. Using the `file_printf` macro (defined in `utils.h`) in `main.c` to print each template to the required files.
 
 
 After completing the above tasks, run `make` to build the `mail-merge-results` executable. 
@@ -48,7 +47,7 @@ After completing the above tasks, run `make` to build the `mail-merge-results` e
 Perform the mail merge by passing the csv file and the output directory as command-line arguments.
 
 ```
-./mail-merge-results students.csv output_dir
+./mail-merge-results template.txt students.csv output_dir
 ```
 
 Now the reqired files will have generated in a folder called `output_dir`.
