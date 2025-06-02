@@ -6,7 +6,7 @@ Assume room number 1 correspond to the LSB and increases all the way to 16 which
 
 **Tasks**
 
-1. Toggle the lights of every $k$th room of the building from the left.
+1. Toggle the lights of every kth room of the building from the right.
 2. Toggle the lights in the even room numbers.
 3. Turn on the lights of the given set of rooms.
 4. Turn off the lights of the given set of rooms.
